@@ -23,7 +23,7 @@ fun LightBoxSizeSelector(
 ) {
     val options = listOf("Small", "Medium", "Large")
     var expanded by remember { mutableStateOf(false) }
-    var selectedOptionText by remember { mutableStateOf(options[0]) }
+    var selectedOptionText by remember { mutableStateOf(options[1]) }
 
     ExposedDropdownMenuBox(
         modifier = modifier,
@@ -36,7 +36,7 @@ fun LightBoxSizeSelector(
             readOnly = true,
             value = selectedOptionText,
             onValueChange = { },
-            label = { Text("Animation") },
+            label = { Text("Light Source Size") },
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(
                     expanded = expanded
